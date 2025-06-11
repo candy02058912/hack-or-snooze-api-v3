@@ -1,6 +1,8 @@
+// Load environment variables first
+dotenv = require('dotenv').config();
+
 // npm packages
 const bodyParser = require('body-parser');
-const dotenv = require('dotenv');
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors')
@@ -12,7 +14,6 @@ const { loginHandler, errorHandler, userHandler } = require('./handlers');
 const { storiesRouter, usersRouter } = require('./routers');
 
 // global constants
-dotenv.config();
 const app = express();
 const {
   bodyParserHandler,
