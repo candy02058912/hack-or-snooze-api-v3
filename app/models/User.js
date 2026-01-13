@@ -58,7 +58,7 @@ userSchema.statics = {
    */
   async deleteUser(username) {
     try {
-      const user = await this.findOneAndRemove({ username });
+      const user = await this.findOneAndDelete({ username });
       if (!user) {
         throw new APIError(
           404,

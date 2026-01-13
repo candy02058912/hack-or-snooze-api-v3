@@ -48,7 +48,7 @@ storySchema.statics = {
    */
   async deleteStory(storyId) {
     try {
-      const story = await this.findOneAndRemove({ storyId });
+      const story = await this.findOneAndDelete({ storyId });
 
       if (!story) {
         throw new APIError(
